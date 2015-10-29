@@ -1,11 +1,47 @@
-function addNewItem(list, itemText){
-	var listItem = document.createElement("li");
-	listItem.innerText = itemText;
+function updateItemStatus() {
+ var cbId = this.id.replace("cb_", "") ; //function replace
+	//console.log(me);
+	//alert(cbId);
+	var itemText = document.getElementById("item_" + cbId);
+	//itemText.innerText = "CLICKED";
+	 //css in js ! replace text-decoration
+	if (this.checked) {
+		itemText.style.textDecoration = "line-through";
+		itemText.style.fontWeight = "800";
+		itemText.style.color = "#c00";
+	}
+	else {
+		itemText.style.textDecoration = "none";
+		itemText.style.fontWeight = "400";
+		itemText.style.color = "#000";
 
-	list.appendChild(listItem); //check this plus global var
-
+	}
 }
 
+function addNewItem(list, itemText){
+	totalItems++;
+		 //<li><input type= "checkbox"/><span></span></li>
+	var listItem = document.createElement("li");
+
+	var checkBox = document.createElement("input");
+	checkBox.type = "checkbox";
+	checkBox.id = "cb_" + totalItems;
+	checkBox.onclick = updateItemStatus;
+
+	var span = document.createElement("span");
+	span.id = "item_" + totalItems;
+	span.innerText = itemText;
+
+	listItem.appendChild(checkBox);
+	listItem.appendChild(span);
+
+	//listItem.innerText = itemText; old code
+	list.appendChild(listItem); //check this plus global var
+
+
+
+}
+var totalItems = 0;
 var inItemText = document.getElementById("inItemText");
 inItemText.focus();
 

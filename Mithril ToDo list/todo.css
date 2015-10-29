@@ -1,0 +1,10 @@
+body {
+    font-family: 'Acto-UltraLight',sans-serif;
+    background-color: #fafafa;
+    font-size: 17px;
+}
+
+@font-face {
+    font-family: "Acto-UltraLight";
+    src: url("../Fonts/Acto/Acto-UltraLight.otf");
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mithril • Todo List</title>
+        <link rel="stylesheet" type="text/css" href="todo.css">
+        <script src="../node_modules/mithril/mithril.min.js"></script>
+        <style type="text/css">
+            ul {list-style: none; padding: 0; margin: 0; width: 500px; }
+            li { border: 1px solid #ccc; background: #eee; padding: 5px 10px; color: #000; }
+            li span { padding-left: 10px; cursor: default; }
+            .checked { text-decoration: line-through; font-weight: bold; color: lightseagreen;}
+        </style>
+    </head>
+    <body>
+        <section id="todoapp">
+        </section>
+        <script src="js/models/todo.js"></script>
+        <script src="js/controllers/todo.js"></script>
+        <script src="js/views/main-view.js"></script>
+        <script src="js/views/single-view.js"></script>
+        <script src="js/views/footer-view.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mithril test project</title>
+  <script src="./node_modules/mithril/mithril.min.js"></script>
+  <script src="test.js"></script>
+</head>
+
+<body>
+<script>
+var app = {};
+
+app.view = function () {
+	return m('h1', 'Heloo World');
+};
+
+m.mount(document.body, app);
+
+console.log("lalala");
+</script>
+</body>
+</html>

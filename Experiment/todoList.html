@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TODO LIST JavaScript</title>
+  <link rel="stylesheet" type="text/css" href="todo.css">
+  <script src="../node_modules/mithril/mithril.min.js"></script>
+  <style type="text/css">
+  ul {list-style: none; padding: 0; margin: 0; width: 500px; }
+  li { border: 1px solid #ccc; background: #eee; padding: 5px 10px; color: #000; }
+  li span { padding-left: 10px; cursor: default; }
+  .checked { text-decoration: line-through; font-weight: bold; color: lightseagreen;}
+  </style>
+  <script src="todoList.js"></script>-->
+</head>
+
+<body>
+<script>
+  var app = {};
+
+  app.view = function (ctrl) {
+    return [
+      m('h1', 'To do list'),
+      m('h1', 'Ahoj'),
+      m('input[placeholder="What needs to be done?"]', {
+        /*onkeypress: app.watchInput(
+                m.withAttr('value', ctrl.title),
+                ctrl.add.bind(ctrl, ctrl.title),
+                ctrl.clearTitle.bind(ctrl)
+        ),
+        value: ctrl.title()*/
+      })
+    ]
+
+  };
+
+  m.mount(document.body, app);
+
+</script>
+
+<!--<p><input type="text" id="inItemText"/>
+  <button id="btnAdd">New Item</button>
+</p>
+
+<ul id="todoList"></ul>
+<script src="odo.js"></script>-->
+
+</body>
+</html>
